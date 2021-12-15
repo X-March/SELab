@@ -647,6 +647,7 @@ public class MainActivity extends PermissionsActivity
     floatingActionButton.removeActionItemById(R.id.menu_new_folder);
     floatingActionButton.removeActionItemById(R.id.menu_new_file);
     floatingActionButton.removeActionItemById(R.id.menu_new_cloud);
+    floatingActionButton.removeActionItemById(R.id.menu_new_audio);
   }
 
   /**
@@ -1692,6 +1693,8 @@ public class MainActivity extends PermissionsActivity
         initFabTitle(R.id.menu_new_file, R.string.file, R.drawable.ic_insert_drive_file_white_48dp);
     FabWithLabelView newFolderFab =
         initFabTitle(R.id.menu_new_folder, R.string.folder, R.drawable.folder_fab);
+    FabWithLabelView newAudioFab =
+            initFabTitle(R.id.menu_new_audio, R.string.audio, R.drawable.ic_doc_audio_am);
 
     floatingActionButton.setOnActionSelectedListener(new FabActionListener(this));
     floatingActionButton.setOnClickListener(
@@ -2262,6 +2265,10 @@ public class MainActivity extends PermissionsActivity
           BottomSheetDialogFragment fragment = new CloudSheetFragment();
           fragment.show(
               ma.getActivity().getSupportFragmentManager(), CloudSheetFragment.TAG_FRAGMENT);
+          break;
+        case R.id.menu_new_audio:
+          mainActivity.mainActivityHelper.mkfile(
+                  ma.getMainFragmentViewModel().getOpenMode(), path, ma);
           break;
       }
 
