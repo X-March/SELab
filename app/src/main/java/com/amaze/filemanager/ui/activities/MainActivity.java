@@ -2266,6 +2266,7 @@ public class MainActivity extends PermissionsActivity
           fragment.show(
               ma.getActivity().getSupportFragmentManager(), CloudSheetFragment.TAG_FRAGMENT);
           break;
+        //b2 changed
         case R.id.menu_new_audio:
           mainActivity.mainActivityHelper.mkfile(
                   ma.getMainFragmentViewModel().getOpenMode(), path, ma);
