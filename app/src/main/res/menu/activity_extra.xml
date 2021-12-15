@@ -65,6 +65,8 @@
         android:visible="false"/>
 
     <!-- orderInCategory=100 to have the element exit always at the end of the list -->
+
+    <!--b3 changed-->
     <item
         android:orderInCategory="100"
         android:title="newpage" />
