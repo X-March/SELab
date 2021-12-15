@@ -1016,6 +1016,8 @@ public class MainActivity extends PermissionsActivity
       menu.findItem(R.id.sethome).setVisible(true);
       menu.findItem(R.id.sort).setVisible(true);
       menu.findItem(R.id.hiddenitems).setVisible(true);
+      
+      menu.findItem(R.id.newpage2).setVisible(true);
       menu.findItem(R.id.view).setVisible(true);
       menu.findItem(R.id.extract).setVisible(false);
       invalidatePasteSnackbar(true);
@@ -1040,6 +1042,7 @@ public class MainActivity extends PermissionsActivity
         menu.findItem(R.id.sortby).setVisible(false);
       }
       menu.findItem(R.id.hiddenitems).setVisible(false);
+      menu.findItem(R.id.newpage2).setVisible(false);
       menu.findItem(R.id.view).setVisible(false);
       invalidatePasteSnackbar(false);
     } else if (fragment instanceof CompressedExplorerFragment) {
@@ -1052,6 +1055,7 @@ public class MainActivity extends PermissionsActivity
       menu.findItem(R.id.history).setVisible(false);
       menu.findItem(R.id.sort).setVisible(false);
       menu.findItem(R.id.hiddenitems).setVisible(false);
+       menu.findItem(R.id.newpage2).setVisible(false);
       menu.findItem(R.id.view).setVisible(false);
       menu.findItem(R.id.extract).setVisible(true);
       invalidatePasteSnackbar(false);
@@ -1146,6 +1150,10 @@ public class MainActivity extends PermissionsActivity
             case R.id.hiddenitems:
               GeneralDialogCreation.showHiddenDialog(
                   dataUtils, getPrefs(), mainFragment, getAppTheme());
+              break;
+            case R.id.newpage2:
+              GeneralDialogCreation.showNewPage2(
+                      dataUtils, getPrefs(), mainFragment, getAppTheme());
               break;
             case R.id.view:
               int pathLayout =

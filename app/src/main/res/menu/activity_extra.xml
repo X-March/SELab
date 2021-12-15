@@ -53,6 +53,10 @@
         android:visible="false"
         android:title="@string/hiddenfiles" />
     <item
+        android:id="@+id/newpage2"
+        android:visible="false"
+        android:title="NewPage2" />
+    <item
         android:id="@+id/sethome"
         android:title="@string/set_as_home"/>
     <item
