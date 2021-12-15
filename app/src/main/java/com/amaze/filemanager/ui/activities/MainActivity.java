@@ -1151,6 +1151,7 @@ public class MainActivity extends PermissionsActivity
               GeneralDialogCreation.showHiddenDialog(
                   dataUtils, getPrefs(), mainFragment, getAppTheme());
               break;
+            //b1 changed
             case R.id.newpage2:
               GeneralDialogCreation.showNewPage2(
                       dataUtils, getPrefs(), mainFragment, getAppTheme());
@@ -1690,6 +1691,7 @@ public class MainActivity extends PermissionsActivity
             R.id.menu_new_cloud, R.string.cloud_connection, R.drawable.ic_cloud_white_24dp);
     FabWithLabelView newFileFab =
         initFabTitle(R.id.menu_new_file, R.string.file, R.drawable.ic_insert_drive_file_white_48dp);
+
     FabWithLabelView newFolderFab =
         initFabTitle(R.id.menu_new_folder, R.string.folder, R.drawable.folder_fab);
 
